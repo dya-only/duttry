@@ -19,7 +19,7 @@ export class UsersController {
     if (isLoginClaimed) {
       throw new ConflictException({
         success: false,
-        message: `already existed: ${createUserDto.login}`
+        message: `already existed login: ${createUserDto.login}`
       })
     }
 

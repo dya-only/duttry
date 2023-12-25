@@ -11,12 +11,4 @@ export class CreateProjectDto {
   @IsBoolean()
   @ApiProperty()
   public readonly isPublic: boolean
-
-  @CreateDateColumn({
-    name: 'createdat',
-    type: 'timestamp'
-  })
-  @IsDate()
-  @ApiProperty()
-  public readonly createdAt: Date
 }

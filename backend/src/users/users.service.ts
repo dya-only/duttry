@@ -24,7 +24,7 @@ export class UsersService {
       bio: createUserDto.bio,
       follower: '[]',
       following: '[]',
-      avatar: 'default',
+      avatar: 'default.png',
       password,
       salt
     })

@@ -12,13 +12,16 @@ export class ProjectsController {
     private readonly projectsService: ProjectsService
   ) {}
 
-  @Post()
   @ApiCookieAuth('JWT_TOKEN')
   @UseGuards(AuthGuard)
-  public async createProject(@Res({ passthrough: true }) res: Response, @Body() createProjectDto: CreateProjectDto) {
+  @Post()
+  public async createProject (@Res({ passthrough: true }) res: Response, @Body() createProjectDto: CreateProjectDto) {
     const userId = res.locals.userId
-    
     await this.projectsService.createProject(userId, createProjectDto)
+
+    return {
+      success: true
+    }
   }
 
   @Get(':projectId')
@@ -37,9 +40,9 @@ export class ProjectsController {
     }
   }
 
-  @Delete(':projectId')
   @ApiCookieAuth('JWT_TOKEN')
   @UseGuards(AuthGuard)
+  @Delete(':projectId')
   public async removeProject (@Res({ passthrough: true }) res: Response, @Param('projectId') projectId: number) {
     const userId = res.locals.userId
     await this.projectsService.removeProject(userId, projectId)
