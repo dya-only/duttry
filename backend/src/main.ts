@@ -29,6 +29,9 @@ async function bootstrap() {
     .setVersion('0.0')
     .addTag('auth', 'Authorization & Authentication')
     .addTag('users', 'User profile & management')
+    .addTag('projects', '')
+    .addTag('objects', '')
+    .addTag('blocks', '')
     .addCookieAuth('TOKEN')
     .build()
 

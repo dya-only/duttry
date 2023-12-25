@@ -11,13 +11,13 @@ import {
   UseInterceptors,
 } from '@nestjs/common'
 import { ObjectsService } from './objects.service'
-import { ApiCookieAuth } from '@nestjs/swagger'
+import { ApiCookieAuth, ApiTags } from '@nestjs/swagger'
 import { AuthGuard } from '../auth/auth.guard'
 import { FileInterceptor } from '@nestjs/platform-express'
 import { UpdateObjectDto } from './dto/UpdateObjectDto'
 import { CreateObjectDto } from './dto/CreateObjectDto'
-import { Response } from 'express'
 
+@ApiTags('objects')
 @ApiCookieAuth('JWT_TOKEN')
 @UseGuards(AuthGuard)
 @Controller('objects')
@@ -29,7 +29,7 @@ export class ObjectsController {
   @Post()
   @UseInterceptors(FileInterceptor('image'))
   public async createObject (@UploadedFile() image: Express.Multer.File, @Body() createObjectDto: CreateObjectDto) {
-    await this.objectsService.createObject(image, createObjectDto.projectId)
+    await this.objectsService.createObject(image, +createObjectDto.projectId)
 
     return {
       success: true
@@ -48,7 +48,12 @@ export class ObjectsController {
 
   @Get(':objectId')
   public async findObject (@Param('objectId') objectId: number) {
-    return await this.objectsService.findObject(objectId)
+    const object = await this.objectsService.findObject(objectId)
+
+    return {
+      success: true,
+      body: object
+    }
   }
 
   @Patch(':objectId')
@@ -72,5 +77,9 @@ export class ObjectsController {
   @Delete(':objectId')
   public async removeObject (@Param('objectId') objectId: number) {
     await this.objectsService.removeObject(objectId)
+
+    return {
+      success: true
+    }
   }
 }

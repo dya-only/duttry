@@ -5,9 +5,5 @@ import { CreateDateColumn } from 'typeorm'
 export class UpdateObjectDto {
   @IsString()
   @ApiProperty()
-  public readonly image: string
-
-  @IsString()
-  @ApiProperty()
   public readonly name: string
 }

@@ -10,21 +10,7 @@ import { _Object } from '../objects/entities/object.entity'
 import { Block } from '../blocks/entities/block.entity'
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([
-      Project,
-      _Object,
-      Block
-    ]),
-    MulterModule.register({
-      storage: diskStorage({
-        destination: join(__dirname, '/uploads/objects'),
-        filename: (_, file, cb) => {
-          cb(null, `${Date.now()}-${file.originalname}`)
-        },
-      }),
-    })
-  ],
+  imports: [TypeOrmModule.forFeature([Project])],
   controllers: [ProjectsController],
   providers: [ProjectsService],
   exports: [ProjectsService]

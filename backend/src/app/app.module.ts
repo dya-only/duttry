@@ -6,6 +6,8 @@ import { AuthModule } from 'src/auth/auth.module'
 import { UsersModule } from 'src/users/users.module'
 import { ConfigurationModule } from '../configuration/configuration.module'
 import { ProjectsModule } from 'src/projects/projects.module'
+import { ObjectsModule } from '../objects/objects.module'
+import { BlocksModule } from '../blocks/blocks.module'
 
 @Module({
   imports: [
@@ -26,7 +28,9 @@ import { ProjectsModule } from 'src/projects/projects.module'
     ConfigurationModule,
     UsersModule,
     AuthModule,
-    ProjectsModule
+    ProjectsModule,
+    ObjectsModule,
+    BlocksModule
   ],
 })
 export class AppModule implements NestModule {

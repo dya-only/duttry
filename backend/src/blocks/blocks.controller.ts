@@ -1,9 +1,10 @@
 import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common'
 import { BlocksService } from './blocks.service'
-import { ApiCookieAuth } from '@nestjs/swagger'
+import { ApiCookieAuth, ApiTags } from '@nestjs/swagger'
 import { AuthGuard } from '../auth/auth.guard'
 import { CreateBlockDto } from './dto/CreateBlockDto'
 
+@ApiTags('blocks')
 @Controller('blocks')
 export class BlocksController {
   constructor (

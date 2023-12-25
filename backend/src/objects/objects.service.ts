@@ -14,7 +14,7 @@ export class ObjectsService {
   public async createObject (image: Express.Multer.File, projectId: number): Promise<void> {
     await this.objects.insert({
       image: image.filename,
-      name: image.originalname,
+      name: image.originalname.split('.')[0],
       projectId
     })
   }
@@ -36,7 +36,7 @@ export class ObjectsService {
 
   public async updateObject (objectId: number, updateObjectDto: UpdateObjectDto): Promise<void> {
     await this.objects.update(
-      { id: objectId },
+      { id: +objectId },
       updateObjectDto
     )
   }
