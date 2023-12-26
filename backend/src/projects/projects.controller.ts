@@ -1,5 +1,6 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Res, UseGuards } from '@nestjs/common'
 import { ProjectsService } from './projects.service'
+import { ObjectsService } from '../objects/objects.service'
 import { ApiCookieAuth, ApiTags } from '@nestjs/swagger'
 import { AuthGuard } from 'src/auth/auth.guard'
 import { CreateProjectDto } from './dto/CreateProjectDto'
