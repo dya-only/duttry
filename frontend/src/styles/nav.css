@@ -1,0 +1,180 @@
+header {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px 0;
+}
+
+.header:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  z-index: 20;
+  content: '';
+}
+
+.container {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  width: 1062px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.logo {
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  float: left;
+  padding: 32px 0;
+}
+
+.logo > a {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  text-decoration: none;
+  display: block;
+  width: 126px;
+  height: 26px;
+  background-image: url('https://playentry.org/img/CommonLogo.svg');
+  background-size: 126px auto;
+  background-repeat: no-repeat;
+}
+
+nav {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  float: left;
+  margin-left: 129px;
+}
+
+ul {
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  list-style: none;
+  overflow: hidden;
+}
+
+li {
+  -webkit-font-smoothing: subpixel-antialiased;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  float: left;
+  width: 170px;
+}
+
+li > a {
+  -webkit-font-smoothing: subpixel-antialiased;
+  list-style: none;
+  -webkit-text-size-adjust: none;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 37px 10px 37px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 16px;
+}
+
+.menu_container {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: absolute;
+  right: -10px;
+  top: 19px;
+}
+
+.menu {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  float: left;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  margin: 0 14px;
+  padding: 12px 0 12px 0;
+}
+
+.search {
+  width: 20px;
+  height: 20px;
+}
+
+.notice {
+  width: 17px;
+  height: 20px;
+}
+
+.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+}
+
+.login {
+  -webkit-text-size-adjust: none;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  float: left;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 76px;
+  height: 36px;
+  border: 1px solid #e2e2e2;
+  border-radius: 18px;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  line-height: 36px;
+  margin-left: -12px;
+  margin-top: -3px;
+}

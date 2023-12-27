@@ -1,0 +1,185 @@
+.bannerContainer {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  display: inline-block;
+  min-width: 1200px;
+  width: 100%;
+  height: 450px;
+  white-space: normal;
+  vertical-align: top;
+  background-color: rgb(2, 80, 196);
+}
+
+.bannerInner {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  white-space: normal;
+  position: relative;
+  width: 1062px;
+  height: 450px;
+  margin: 0 auto;
+  background-size: 1062px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("https://playentry.org/uploads/8l/no/8lnombx7ljmr8jzr1wj9d7d7010mowqa.png");
+}
+
+.textbox {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  white-space: normal;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 448px;
+  transform: translateY(-50%);
+}
+
+.titleStyle {
+  -webkit-text-size-adjust: none;
+  font-family: 'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  white-space: normal;
+  display: block;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 34px;
+  color: rgb(255, 255, 255);
+}
+
+.subTitleStyle {
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  white-space: normal;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  font-family: 'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgb(255, 255, 255);
+}
+
+.bannerBtn {
+  -webkit-text-size-adjust: none;
+  font-family: NanumSquareWebFont,'Nanum Gothic',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  user-select: none;
+  white-space: normal;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 146px;
+  height: 40px;
+  padding-left: 30px;
+  margin-top: 36px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  line-height: 40px;
+}
+.bannerBtn:after {
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  margin: 16px 0 0 24px;
+  background-image: url('https://playentry.org/img/IcoTextArrowWhite.svg');
+  background-size: 5px;
+  vertical-align: top;
+  content: "";
+}
+
+.staffContainer {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: 521px;
+  background: linear-gradient(179deg, #16d8a2 2%, #13dbb0 30%, #44e8e6 97%);
+}
+
+.staff {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  max-width: 1200px;
+  height: 521px;
+  margin: 0px auto;
+  background-image: url("https://playentry.org/img/BgStaffPickInner.jpg");
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  background-size: 1200px;
+}
+
+.popularContainer {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin-top: 72px;
+  height: 328px;
+}
+
+.popularMenu {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+  width: 1062px;
+  margin: 0 auto;
+}
+
+.popularBtn {
+  -webkit-text-size-adjust: none;
+  font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-decoration: none;
+  overflow: hidden;
+  position: absolute;
+  right: -18px;
+  top: -8px;
+  padding: 0px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  line-height: 40px;
+  z-index: 10;
+}
+.popularBtn:after {
+  display: inline-block;
+  width: 5px;
+  height: 8px;
+  margin: 16px 0 0 6px;
+  background-image: url('https://playentry.org/img/IcoTextArrow2.svg');
+  background-size: 5px;
+  vertical-align: top;
+  content: "";
+}
