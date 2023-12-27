@@ -104,7 +104,7 @@ li > a {
   line-height: 16px;
 }
 
-.menu_container {
+.menuContainer {
   -webkit-text-size-adjust: none;
   color: #2c313d;
   font-family: NanumSquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
@@ -177,4 +177,16 @@ li > a {
   line-height: 36px;
   margin-left: -12px;
   margin-top: -3px;
+}
+
+.headerMenu {
+  color: #968fff;
+  font-family: NanumquareWebFont,'나눔고딕',NanumGothic,-apple-system,'맑은 고딕',Malgun Gothic,'돋움',dotum,Helvetica,arial,sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: fixed;
+  width: 1062px;
+  height: 277px;
+  margin: 0 auto;
+  z-index: 100;
+  box-sizing: border-box;
 }

@@ -1,0 +1,864 @@
+header {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(79, 128, 255);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  min-width: 1024px;
+  z-index: 300;
+}
+
+.container {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.logo {
+  -webkit-font-smoothing: subpixel-antialiased;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 19px;
+  background-image: url("https://playentry.org/img/ws/entry_logo.svg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  vertical-align: top;
+  z-index: 10;
+}
+
+.name {
+  -webkit-appearance: none;
+  background: none;
+  outline: 0;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  position: absolute;
+  left: 124px;
+  top: 10px;
+  width: 164px;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: content-box;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.4px;
+  line-height: 14px;
+  vertical-align: top;
+  margin-left: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(44, 49, 61);
+}
+
+.menuContainer {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 10;
+  padding: 8px;
+}
+
+.menuBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.menuBtnContainer {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 0;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.menuBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-top: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 48px;
+  height: 32px;
+  border-radius: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(154, 182, 255);
+  background-color: rgb(110, 151, 255);
+  cursor: pointer;
+}
+
+.blockBtn:before {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_block.svg') 0 0 / 18px no-repeat;
+}
+.blockBtn:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.fileBtn:before {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_file.png') 0 0 / 18px no-repeat;
+}
+.fileBtn:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.saveBtn:before {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_save.png') 0 0 / 18px no-repeat;
+}
+.saveBtn:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.helpBtn:before {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_help.png') 0 0 / 18px no-repeat;
+}
+.helpBtn:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.printBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: NanumGothic, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  width: 32px;
+  cursor: pointer;
+  background: url("https://playentry.org/img/gnb/btn_workspace_print.svg") 0 0 / 32px no-repeat;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.menuBtnContainer > hr {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-left: 13px;
+  margin-right: 3px;
+  display: inline-block;
+  width: 1px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-image: initial;
+  border-left: 1px solid rgb(255, 255, 255);
+  height: 16px;
+}
+
+.prevBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: NanumGothic, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  width: 32px;
+  cursor: default;
+  background: url("https://playentry.org/img/gnb/btn_workspace_undo_disabled.svg") 0 0 / 32px no-repeat;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.nextBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: NanumGothic, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  width: 32px;
+  cursor: default;
+  background: url("https://playentry.org/img/gnb/btn_workspace_redo_disabled.svg") 0 0 / 32px no-repeat;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.dropContainer {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.drop {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding-right: 20px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  line-height: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropType {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 4px;
+  line-height: 16pt;
+}
+.dropType:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.langBtnContainer {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: content-box;
+  min-width: 46px;
+  height: 30px;
+  background-color: rgb(110, 151, 255);
+  border: 1px solid rgb(154, 182, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 14px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.langBtnInner {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 14px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+.langBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding-right: 20px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  line-height: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.langType {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 4px;
+  line-height: 16pt;
+}
+.langType:after {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 6px;
+  height: 4px;
+  margin-top: -2px;
+  content: "";
+  background: url('https://playentry.org/img/gnb/btn_workspace_arr.png') 0 0 / 6px no-repeat;
+}
+
+.sceneMenuContainer {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-flow: row nowrap;
+  user-select: none;
+}
+
+.sceneContainer {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  height: 35px;
+  padding-top: 1px;
+  padding-left: 20px;
+  background-color: #4f80ff;
+  /*overflow: hidden;*/
+  z-index: 10;
+  user-select: none;
+}
+
+.scene {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  float: left;
+  margin: 0;
+  padding: 0 0 0 26px;
+  max-width: calc(100% - 72px);
+  user-select: none;
+  display: block;
+}
+
+.sceneInner {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  user-select: none;
+}
+
+.sortable {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic, HelveticaNeue, AppleSDGothicNeo-Regular, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  user-select: none;
+}
+
+.rcs-custom-scroll {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+  user-select: none;
+  height: 100%;
+}
+
+.rcs-outer-container {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  overflow: visible;
+  user-select: none;
+  height: 100%;
+}
+
+.rcs-inner-container {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  overflow: visible;
+  user-select: none;
+  height: 100%;
+  margin-right: -20px;
+}
+
+.sortable__de989 {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.sortableItem {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  z-index: 15;
+  display: table-cell;
+  vertical-align: top;
+  width: 76px;
+  user-select: none;
+}
+
+.selectedScene {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #fff;
+  cursor: move;
+  position: relative;
+  margin: 5px 2px 0 0;
+  z-index: 888;
+  user-select: none;
+}
+
+.entrySceneLeftWorkspace {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: #fff;
+  cursor: move;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.entrySceneInputCover {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: #fff;
+  cursor: move;
+  user-select: none;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  border-bottom: 2px solid transparent;
+  min-width: 97px;
+  height: 37px;
+  padding: 7px 30px 0 10px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  border-bottom-color: #ffb500;
+}
+
+.entrySceneFieldWorkspace {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  cursor: text!important;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  height: 24px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #ffb500;
+}
+
+.entrySceneRemoveButtonCoverWorkspace {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  color: #fff;
+  cursor: move;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.entrySceneRemoveButtonWorkspace {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  outline: 0;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background-size: 10px auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  top: 3px;
+  background-color: transparent;
+  background-image: url('https://playentry.org/lib/entry-js/images/scene_delete.png');
+}
+
+.addSceneBtn {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  user-select: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #fff;
+  z-index: 10;
+  float: left;
+  position: relative;
+  margin: 8px 0 0 -2px;
+  width: 44px;
+  height: 34px;
+  cursor: pointer;
+  background-image: url('https://playentry.org/lib/entry-js/images/btn_scene_add.png');
+  background-size: 44px 34px;
+}
+
+.playPanel {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #d6e9f4;
+  border-radius: 6px;
+  user-select: none;
+  width: 550px;
+  margin: 10px;
+}
+
+.speedBtn {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  float: left;
+  width: 18px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 10px;
+  background-image: url('https://playentry.org/lib/entry-js/images/speed_edit.png');
+  background-size: 18px auto;
+}
+
+.gridBtn {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 24px;
+  background-color: transparent;
+  background-position: 50%;
+  float: right;
+  margin: 4px 6px 0 5px;
+  background-image: url('https://playentry.org/lib/entry-js/images/layers_icon_grid_nor.png');
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+}
+
+.scaleBtn {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 24px;
+  background-color: transparent;
+  background-position: 50%;
+  float: right;
+  margin: 4px 6px 0 5px;
+  background-image: url('https://playentry.org/lib/entry-js/images/layers_icon_fullmode01_nor_1.png');
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+}
+
+canvas {
+  -webkit-text-size-adjust: none;
+  color: #2c313d;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  user-select: none;
+  aspect-ratio: auto 640 / 360;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #d6e9f4;
+  vertical-align: top;
+  width: 548px;
+}
+
+.engineBtnContainer {
+  margin: 5px 10px;
+}
+
+.objectAddBtn {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  flex: none;
+  width: 274px;
+  height: 36px;
+  border: 1px solid #4f80ff;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f80ff;
+  letter-spacing: -.43px;
+  line-height: 34px;
+  text-align: center;
+}
+.objectAddBtn:before {
+  background-image: url('https://playentry.org/lib/entry-js/images/layers_icon_button_plus_nor.png');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 11px 2px 0 0;
+  background-size: 12px auto;
+  vertical-align: top;
+  content: "";
+}
+
+.startEngineBtn {
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background: none;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  vertical-align: top;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-family: NanumGothic,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  flex: 1 1 auto;
+  position: relative;
+  width: 272px;
+  height: 36px;
+  padding: 0;
+  margin-left: 4px;
+  border: 1px solid #4f80ff;
+  border-radius: 4px;
+  background-color: #4f80ff;
+  background-size: 10px auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+}
+.startEngineBtn:before {
+  background-image: url('https://playentry.org/lib/entry-js/images/layers_icon_button_play_nor_1.png');
+  display: inline-block;
+  width: 11px;
+  height: 12px;
+  background-size: 11px auto;
+  margin: 11px 4px 0 0;
+  vertical-align: top;
+  content: "";
+}

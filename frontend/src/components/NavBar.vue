@@ -3,7 +3,11 @@
 </script>
 
 <template>
+    <div class="headerMenu">
+
+    </div>
   <header>
+
     <div class="container">
       <h1 class="logo">
         <a href="/" />
@@ -12,13 +16,13 @@
       <nav>
         <ul>
           <li><a href="">생각하기</a></li>
-          <li><a href="">만들기</a></li>
+          <li><a href="/ws/new">만들기</a></li>
           <li><a href="">공유하기</a></li>
           <li><a href="">커뮤니티</a></li>
         </ul>
       </nav>
 
-      <div class="menu_container">
+      <div class="menuContainer">
         <div class="menu">
           <a class='icon'>
             <img class='search' src="https://playentry.org/img/IcoTopSearch.svg" alt="">
