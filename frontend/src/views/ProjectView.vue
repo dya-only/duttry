@@ -1,47 +1,40 @@
 <script setup lang="ts">
 
-import BlockMenu from "@/components/blockMenu.vue"
-import {UseDraggable} from "@vueuse/components"
+import draggable from 'vuedraggable'
+import BlockMenu from "@/components/BlockMenu.vue"
+import {ref} from "vue";
 
 let availableBlocks = ref([
   {
     id: 1,
     name: '시작되었을 때',
     blockType: 'start',
-    position: {x: 640, y: 140},
   },
   {
     id: 2,
     name: '앞으로 10 움직이기',
     blockType: 'action',
     blockAction: 'x + 10',
-    position: {x: 640, y: 180}
   }
 ])
-const usedBlocks = ref([])
 
-const onMouseUp = (e: any) => {
-  console.log('block successed')
-  console.log(e.target.id.split(' ')[1])
+let usedBlocks = ref([
+  {
+    id: 0,
+    name: ''
+  }
+])
+let drag = false
+usedBlocks.value.shift()
 
-}
-
-const onMouseDown = (e: any) => {
-  console.log('block dragging')
-  console.log(e.target.id.split('k ')[1])
-  availableBlocks.value = availableBlocks.value.filter((el) => el.id !== e.target.id.split('k ')[1])
-  console.log(availableBlocks)
-}
-
-onMounted(() => {
-
-})
 </script>
 
 <template>
   <header>
     <div class="container">
-      <div class="logo"></div>
+      <a href="/">
+        <div class="logo"></div>
+      </a>
     </div>
     <input class="name" type="text" maxlength="30" value="성민이 바보"/>
 
@@ -152,27 +145,43 @@ onMounted(() => {
 
       <div class="workSpace">
         <ul class="blockMenuContainer">
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/start.svg' name='시작'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/flow.svg' name='흐름'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/moving.svg' name='움직임'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/looks.svg' name='생김새'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/brush.svg' name='붓'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/sound.svg' name='소리'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/judgement.svg' name='판단'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/calc.svg' name='계산'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/variable.svg' name='자료'/>
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/func.svg' name='함수'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/start.svg' name='시작'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/flow.svg' name='흐름'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/moving.svg' name='움직임'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/looks.svg' name='생김새'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/brush.svg' name='붓'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/sound.svg' name='소리'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/judgement.svg' name='판단'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/calc.svg' name='계산'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/variable.svg' name='자료'/>
+          <BlockMenu logo='https://playentry.org/lib/entry-js/images/func.svg' name='함수'/>
         </ul>
 
         <div class="blockContainer">
-          <UseDraggable class="block" v-for="el in availableBlocks" :id="'block ' + el.id" :initial-value="el.position" @mouseup="onMouseUp" @mousedown="onMouseDown">
-            {{el.name}}
-          </UseDraggable>
+          <draggable
+              class="list-group"
+              :list="availableBlocks"
+              group="people"
+              itemKey="name"
+          >
+            <template #item="{ element, index }">
+              <div class="list-group-item block" :style="{ top: index * 50 + 135 + 'px' }">{{ element.name }}</div>
+            </template>
+          </draggable>
         </div>
 
         <div class="workspacePanel">
           <div class="entryBg">
-            <!--            <img v-for="n in 300" :key="n" class="bg" src="https://playentry.org/lib/entry-js/images/entry_bg.svg" alt="">-->
+            <draggable
+                class="workspaceBlockContainer"
+                :list="usedBlocks"
+                group="people"
+                itemKey="name"
+            >
+              <template #item="{ element, index }">
+                <div class="list-group-item block" :style="{ top: index * 50 + 135 + 'px' }">{{ element.name }}</div>
+              </template>
+            </draggable>
           </div>
         </div>
       </div>
