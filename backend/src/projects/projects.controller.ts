@@ -31,7 +31,7 @@ export class ProjectsController {
     if (project === undefined) {
       throw new NotFoundException({
         success: false,
-        message: 'Project not found'
+        message: 'ProjectPage not found'
       })
     }
 

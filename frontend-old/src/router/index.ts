@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/ws/new',
       name: 'newProject',
       component: () => import('../views/ProjectView.vue')
+    },
+    {
+      path: '/drag',
+      name: 'drag',
+      component: () => import('../views/Drag.vue')
     }
   ]
 })

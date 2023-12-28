@@ -988,3 +988,12 @@ canvas {
   z-index: -10;
   width: 50px
 }
+
+.block {
+  position: fixed;
+  z-index: 1000;
+  padding: 10px;
+  background: lightgreen;
+  border-radius: 20px;
+  font-weight: 600;
+}

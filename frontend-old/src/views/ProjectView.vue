@@ -1,25 +1,41 @@
 <script setup lang="ts">
 
 import BlockMenu from "@/components/blockMenu.vue"
-import {ref} from "vue"
-import { VueDraggableNext } from 'vue-draggable-next'
+import {UseDraggable} from "@vueuse/components"
 
-const availableBlocks = ref([
+let availableBlocks = ref([
   {
     id: 1,
     name: '시작되었을 때',
     blockType: 'start',
-    position: { x: 100, y: 100 },
+    position: {x: 640, y: 140},
   },
   {
     id: 2,
     name: '앞으로 10 움직이기',
     blockType: 'action',
     blockAction: 'x + 10',
-    position: { x: 100, y: 150 }
+    position: {x: 640, y: 180}
   }
 ])
 const usedBlocks = ref([])
+
+const onMouseUp = (e: any) => {
+  console.log('block successed')
+  console.log(e.target.id.split(' ')[1])
+
+}
+
+const onMouseDown = (e: any) => {
+  console.log('block dragging')
+  console.log(e.target.id.split('k ')[1])
+  availableBlocks.value = availableBlocks.value.filter((el) => el.id !== e.target.id.split('k ')[1])
+  console.log(availableBlocks)
+}
+
+onMounted(() => {
+
+})
 </script>
 
 <template>
@@ -136,24 +152,27 @@ const usedBlocks = ref([])
 
       <div class="workSpace">
         <ul class="blockMenuContainer">
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/start.svg' name='시작' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/flow.svg' name='흐름' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/moving.svg' name='움직임' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/looks.svg' name='생김새' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/brush.svg' name='붓' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/sound.svg' name='소리' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/judgement.svg' name='판단' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/calc.svg' name='계산' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/variable.svg' name='자료' />
-          <blockMenu logo='https://playentry.org/lib/entry-js/images/func.svg' name='함수' />
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/start.svg' name='시작'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/flow.svg' name='흐름'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/moving.svg' name='움직임'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/looks.svg' name='생김새'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/brush.svg' name='붓'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/sound.svg' name='소리'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/judgement.svg' name='판단'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/calc.svg' name='계산'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/variable.svg' name='자료'/>
+          <blockMenu logo='https://playentry.org/lib/entry-js/images/func.svg' name='함수'/>
         </ul>
 
         <div class="blockContainer">
+          <UseDraggable class="block" v-for="el in availableBlocks" :id="'block ' + el.id" :initial-value="el.position" @mouseup="onMouseUp" @mousedown="onMouseDown">
+            {{el.name}}
+          </UseDraggable>
         </div>
 
         <div class="workspacePanel">
           <div class="entryBg">
-<!--            <img v-for="n in 300" :key="n" class="bg" src="https://playentry.org/lib/entry-js/images/entry_bg.svg" alt="">-->
+            <!--            <img v-for="n in 300" :key="n" class="bg" src="https://playentry.org/lib/entry-js/images/entry_bg.svg" alt="">-->
           </div>
         </div>
       </div>
