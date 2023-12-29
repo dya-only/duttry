@@ -8,9 +8,5 @@ export class UpdateBlockDto {
 
   @IsInt()
   @ApiProperty()
-  public readonly prevBlockId: number | null
-
-  @IsInt()
-  @ApiProperty()
-  public readonly nextBlockId: number | null
+  public readonly sequence: number
 }

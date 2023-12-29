@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { IsEmpty, IsInt, IsOptional, IsString } from 'class-validator'
+import { IsInt, IsOptional, IsString } from 'class-validator'
 
 export class CreateBlockDto {
   @IsInt()
@@ -8,7 +8,7 @@ export class CreateBlockDto {
 
   @IsString()
   @ApiProperty()
-  public readonly blockType: 'start' | 'action' | 'logical'
+  public readonly blockType: 'start' | 'action' | 'logical' | 'loop'
 
   @IsString()
   @IsOptional()
@@ -16,12 +16,6 @@ export class CreateBlockDto {
   public readonly blockAction: string | null
 
   @IsInt()
-  @IsOptional()
   @ApiProperty()
-  public readonly prevBlockId: number | null
-
-  @IsInt()
-  @IsOptional()
-  @ApiProperty()
-  public readonly nextBlockId: number | null
+  public readonly sequence: number
 }

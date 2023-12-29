@@ -23,7 +23,7 @@ export class Block {
   })
   @IsString()
   @ApiProperty()
-  public readonly blockType: 'start' | 'action' | 'logical'
+  public readonly blockType: 'start' | 'action' | 'logical' | 'loop'
 
   @Column({
     name: 'block_action',
@@ -35,22 +35,13 @@ export class Block {
   public readonly blockAction: string | null
 
   @Column({
-    name: 'prev_block_id',
+    name: 'sequence',
     type: 'int',
-    nullable: true
+    nullable: false
   })
   @IsInt()
   @ApiProperty()
-  public readonly prevBlockId: number | null
-
-  @Column({
-    name: 'next_block_id',
-    type: 'int',
-    nullable: true
-  })
-  @IsInt()
-  @ApiProperty()
-  public readonly nextBlockId: number | null
+  public readonly sequence: number
 
   @Column({
     name: 'objects_id',
