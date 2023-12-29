@@ -996,13 +996,16 @@ canvas {
 }
 
 .block {
-  /*position: fixed;*/
   z-index: 1000;
   padding: 10px;
   margin: 20px;
   background: lightgreen;
   border-radius: 18px;
   font-weight: 600;
+}
+
+.list-group {
+  width: 300px;
 }
 
 .workspaceBlockContainer {

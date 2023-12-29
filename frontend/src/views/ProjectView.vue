@@ -2,19 +2,42 @@
 
 import draggable from 'vuedraggable'
 import BlockMenu from "@/components/BlockMenu.vue"
-import {ref} from "vue";
+import {ref} from "vue"
 
 let availableBlocks = ref([
   {
     id: 1,
     name: '시작되었을 때',
     blockType: 'start',
+    width: 100
   },
   {
     id: 2,
     name: '앞으로 10 움직이기',
     blockType: 'action',
     blockAction: 'x + 10',
+    width: 150
+  },
+  {
+    id: 3,
+    name: '방향을 90% 만큼 회전하기',
+    blockType: 'action',
+    blockAction: 'deg + 90',
+    width: 200
+  },
+  {
+    id: 4,
+    name: '모양 보이기',
+    blockType: 'action',
+    blockAction: 'appear',
+    width: 80
+  },
+  {
+    id: 5,
+    name: '모양 숨기기',
+    blockType: 'action',
+    blockAction: 'hide',
+    width: 80
   }
 ])
 
@@ -26,6 +49,15 @@ let usedBlocks = ref([
 ])
 let drag = false
 usedBlocks.value.shift()
+
+const checkMove = (e: any) => {
+  return e.from !== e.to;
+}
+
+const getStart = () => {
+  console.log(availableBlocks.value)
+  console.log(usedBlocks.value)
+}
 
 </script>
 
@@ -128,7 +160,7 @@ usedBlocks.value.shift()
 
       <div class="engineBtnContainer">
         <button class="objectAddBtn">오브젝트 추가하기</button>
-        <button class="startEngineBtn">시작하기</button>
+        <button class="startEngineBtn" v-on:click="getStart">시작하기</button>
       </div>
 
       <div class="objectListContainer"></div>
@@ -161,11 +193,15 @@ usedBlocks.value.shift()
           <draggable
               class="list-group"
               :list="availableBlocks"
-              group="people"
+              :group="{ name: 'blocks', pull: 'clone', put: false }"
+              :move="checkMove"
               itemKey="name"
+              :animation="300"
           >
             <template #item="{ element, index }">
-              <div class="list-group-item block" :style="{ top: index * 50 + 135 + 'px' }">{{ element.name }}</div>
+              <div :id="element.id" class="list-group-item block"
+                   :style="{ top: index * 50 + 135 + 'px', width: element.width + 'px' }">{{ element.name }}
+              </div>
             </template>
           </draggable>
         </div>
@@ -175,11 +211,16 @@ usedBlocks.value.shift()
             <draggable
                 class="workspaceBlockContainer"
                 :list="usedBlocks"
-                group="people"
+                group="blocks"
                 itemKey="name"
+                @start="drag = true"
+                @end="drag = false"
+                :animation="300"
             >
               <template #item="{ element, index }">
-                <div class="list-group-item block" :style="{ top: index * 50 + 135 + 'px' }">{{ element.name }}</div>
+                <div class="list-group-item block"
+                     :style="{ top: index * 50 + 135 + 'px', width: element.width + 'px' }">{{ element.name }}
+                </div>
               </template>
             </draggable>
           </div>
